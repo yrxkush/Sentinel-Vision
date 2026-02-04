@@ -1,0 +1,43 @@
+Sentinel-Vision Project Structure
+=================================
+
+Sentinel-Vision/
+├── .git/
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── folder_structure.txt
+├── venv/
+│
+├── data/
+│   ├── Offroad_Segmentation_testImages/
+│   │   ├── Color_Images/
+│   │   └── Segmentation/
+│   │
+│   └── Offroad_Segmentation_Training_Dataset/
+│       ├── train/
+│       │   ├── Color_Images/
+│       │   └── Segmentation/
+│       │
+│       └── val/
+│           ├── Color_Images/
+│           └── Segmentation/
+│
+├── outputs/
+│   └── temp.txt
+│
+├── planner/
+│   └── temp.txt
+│
+└── modal/
+    └── Offroad_Segmentation_Scripts/
+        ├── requirements.txt
+        ├── segmentation_head.pth
+        ├── test_segmentation.py
+        ├── train_segmentation.py
+        ├── visualize.py
+        │
+        └── ENV_SETUP/
+            ├── create_env.bat
+            ├── install_packages.bat
+            └── setup_env.bat
