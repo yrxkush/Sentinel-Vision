@@ -1,0 +1,20 @@
+# Requirements for Offroad Segmentation Scripts
+# Compatible with Python 3.10, CPU/GPU
+
+# Core ML (install via pip for CPU, or use conda for GPU with CUDA)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image processing
+opencv-contrib-python>=4.8.0
+Pillow>=9.0.0
+
+# Numerical & visualization
+numpy>=1.23.0
+matplotlib>=3.6.0
+
+# Utilities
+tqdm>=4.64.0
+
+# Object detection (used in project)
+ultralytics>=8.0.0
