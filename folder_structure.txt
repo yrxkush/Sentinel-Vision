@@ -1,43 +1,46 @@
-Sentinel-Vision Project Structure
-=================================
-
-Sentinel-Vision/
-├── .git/
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── folder_structure.txt
-├── venv/
+SentinalVision/
+├── frontend/
+│   └── app.py                    # Gradio web interface
+│
+├── modal/
+│   └── Offroad_Segmentation_Scripts/
+│       ├── train_segmentation.py  # Training script
+│       ├── test_segmentation.py   # Testing/inference script
+│       ├── run_single.py          # Single image inference
+│       ├── visualize.py           # Visualization utilities
+│       ├── segmentation_head.pth  # Pre-trained model weights (12MB)
+│       ├── train_stats/           # Training metrics & plots
+│       └── ENV_SETUP/             # Environment setup scripts
+│           ├── create_env.bat
+│           ├── install_packages.bat
+│           └── setup_env.bat
+│
+├── planner/
+│   ├── mask_to_heatmap.py         # Cost map conversion
+│   ├── visualize_path.py          # Path visualization
+│   ├── batch_process.py           # Batch inference pipeline
+│   └── compare_stats.py           # Model comparison utilities
 │
 ├── data/
 │   ├── Offroad_Segmentation_testImages/
-│   │   ├── Color_Images/
-│   │   └── Segmentation/
+│   │   ├── Color_Images/          # Test input images
+│   │   └── Segmentation/          # Ground truth masks
 │   │
 │   └── Offroad_Segmentation_Training_Dataset/
 │       ├── train/
-│       │   ├── Color_Images/
-│       │   └── Segmentation/
-│       │
+│       │   ├── Color_Images/      # Training images
+│       │   └── Segmentation/      # Training masks
 │       └── val/
-│           ├── Color_Images/
-│           └── Segmentation/
+│           ├── Color_Images/      # Validation images
+│           └── Segmentation/      # Validation masks
 │
-├── outputs/
-│   └── temp.txt
+├── outputs/                       # Generated outputs
+│   ├── mask.png                   # Segmentation output
+│   ├── heatmap.npy                # Cost heatmap (numpy)
+│   ├── heatmap_vis.png            # Heatmap visualization
+│   ├── safe_areas.png             # Safe traversal overlay
+│   └── comparison.png             # Side-by-side results
 │
-├── planner/
-│   └── temp.txt
-│
-└── modal/
-    └── Offroad_Segmentation_Scripts/
-        ├── requirements.txt
-        ├── segmentation_head.pth
-        ├── test_segmentation.py
-        ├── train_segmentation.py
-        ├── visualize.py
-        │
-        └── ENV_SETUP/
-            ├── create_env.bat
-            ├── install_packages.bat
-            └── setup_env.bat
+├── requirements.txt               # Python dependencies
+├── folder_structure.txt           # Project structure reference
+└── README.md                      # This file
