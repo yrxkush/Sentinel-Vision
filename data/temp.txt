@@ -1,1 +1,6 @@
-U can use any type of data acc to the output u need, for more info read readme file
+This file describes the types of data you can use with Sentinel-Vision.
+
+- You can use any type of data, depending on the output you require.
+- For detailed information on supported data formats and usage, please refer to the [README file](../README.md) in the repository.
+
+If you have specific requirements or encounter issues, consult the relevant sections in the README or reach out via the issues page.
